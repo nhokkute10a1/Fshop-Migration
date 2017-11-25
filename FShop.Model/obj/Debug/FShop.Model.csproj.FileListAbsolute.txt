@@ -1,0 +1,17 @@
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Model\bin\Debug\FShop.Model.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Model\bin\Debug\FShop.Model.pdb
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Model\obj\Debug\FShop.Model.csprojResolveAssemblyReference.cache
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Model\obj\Debug\FShop.Model.csproj.CoreCompileInputs.cache
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Model\obj\Debug\FShop.Model.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Model\obj\Debug\FShop.Model.pdb
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Model\bin\Debug\FShop.Model.dll.config
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Model\bin\Debug\EntityFramework.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Model\bin\Debug\FShop.Common.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Model\bin\Debug\FShop.Common.pdb
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Model\bin\Debug\EntityFramework.xml
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Model\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Model\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Model\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
