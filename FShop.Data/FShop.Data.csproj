@@ -61,8 +61,24 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ContactDetails\ContactDetailRepository.cs" />
+    <Compile Include="Repositories\Errors\ErrorRepository.cs" />
+    <Compile Include="Repositories\Feedbacks\FeedbackRepository.cs" />
+    <Compile Include="Repositories\Footers\FooterRepository.cs" />
+    <Compile Include="Repositories\Menus\MenuGroupRepository.cs" />
+    <Compile Include="Repositories\Menus\MenuRepository.cs" />
+    <Compile Include="Repositories\Pages\PageRepository.cs" />
+    <Compile Include="Repositories\Posts\PostCategoryRepository.cs" />
+    <Compile Include="Repositories\Posts\PostRepository.cs" />
+    <Compile Include="Repositories\Posts\PostTagRepository.cs" />
     <Compile Include="Repositories\Products\ProductCategoryRepository.cs" />
     <Compile Include="Repositories\Products\ProductRepository.cs" />
+    <Compile Include="Repositories\Products\ProductTagRepository.cs" />
+    <Compile Include="Repositories\Slides\SlideRepository.cs" />
+    <Compile Include="Repositories\SupportOnlines\SupportOnlineRepository.cs" />
+    <Compile Include="Repositories\SystemConfigs\SystemConfigRepository.cs" />
+    <Compile Include="Repositories\Tags\TagRepository.cs" />
+    <Compile Include="Repositories\VisitorStatistics\VisitorStatisticRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -82,6 +98,9 @@
     <EmbeddedResource Include="Migrations\201711250718594_InitialCreate.resx">
       <DependentUpon>201711250718594_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\Orders\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
