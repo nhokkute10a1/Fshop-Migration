@@ -47,7 +47,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FShopDbContext.cs" />
+    <Compile Include="Infrastructure\DbFactory.cs" />
+    <Compile Include="Infrastructure\Disposable.cs" />
+    <Compile Include="Infrastructure\IDbFactory.cs" />
+    <Compile Include="Infrastructure\IRepository.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\RepositoryBase.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Migrations\201711250718594_InitialCreate.cs" />
+    <Compile Include="Migrations\201711250718594_InitialCreate.Designer.cs">
+      <DependentUpon>201711250718594_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Products\ProductCategoryRepository.cs" />
+    <Compile Include="Repositories\Products\ProductRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -58,6 +73,15 @@
       <Project>{f593668c-0ffe-4e66-9445-baa8841207f2}</Project>
       <Name>FShop.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FShop.Model\FShop.Entities.csproj">
+      <Project>{0148b58a-25ed-4b11-95f6-1b582d709e1f}</Project>
+      <Name>FShop.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201711250718594_InitialCreate.resx">
+      <DependentUpon>201711250718594_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

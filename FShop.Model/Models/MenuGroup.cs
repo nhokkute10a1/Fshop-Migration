@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace FShop.Model.Models
+namespace FShop.Entities.Models
 {
     [Table("MenuGroups")]
     public class MenuGroup

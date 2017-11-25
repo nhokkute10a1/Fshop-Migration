@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FShop.Model.Abstract
+namespace FShop.Entities.Abstract
 {
     public interface IAuditable
     {

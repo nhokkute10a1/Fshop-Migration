@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FShop.Model.Models
+namespace FShop.Entities.Models
 {
     [Table("ContactDetails")]
     public class ContactDetail

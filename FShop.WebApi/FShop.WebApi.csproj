@@ -268,9 +268,9 @@
       <Project>{012c5c39-1fdf-4fcd-848c-decc11298c41}</Project>
       <Name>FShop.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\FShop.Model\FShop.Model.csproj">
+    <ProjectReference Include="..\FShop.Model\FShop.Entities.csproj">
       <Project>{0148b58a-25ed-4b11-95f6-1b582d709e1f}</Project>
-      <Name>FShop.Model</Name>
+      <Name>FShop.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\FShop.Service\FShop.Service.csproj">
       <Project>{c767c3cb-8951-438f-bcde-e28aa0cf344a}</Project>

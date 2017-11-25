@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{B79C40E9-C30E-472C-9AAD-872AF8828B2C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{52DF21D6-6F27-4B01-B2BD-6824DF44DF2F}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{52DF21D6-6F27-4B01-B2BD-6824DF44DF2F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{EE2EBFF8-6716-4D86-B220-BB63CED60750}"
 EndProject
@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FShop.Common", "FShop.Commo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FShop.Data", "FShop.Data\FShop.Data.csproj", "{012C5C39-1FDF-4FCD-848C-DECC11298C41}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FShop.Model", "FShop.Model\FShop.Model.csproj", "{0148B58A-25ED-4B11-95F6-1B582D709E1F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FShop.Entities", "FShop.Model\FShop.Entities.csproj", "{0148B58A-25ED-4B11-95F6-1B582D709E1F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FShop.Service", "FShop.Service\FShop.Service.csproj", "{C767C3CB-8951-438F-BCDE-E28AA0CF344A}"
 EndProject

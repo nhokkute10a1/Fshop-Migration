@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace FShop.Model.Models
+namespace FShop.Entities.Models
 {
     [Table("Errors")]
     public class Error

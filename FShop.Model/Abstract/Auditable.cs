@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace FShop.Model.Abstract
+namespace FShop.Entities.Abstract
 {
     public abstract class Auditable : IAuditable
     {

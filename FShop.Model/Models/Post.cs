@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using FShop.Model.Abstract;
+using FShop.Entities.Abstract;
 
-namespace FShop.Model.Models
+namespace FShop.Entities.Models
 {
     [Table("Posts")]
     public class Post : Auditable
