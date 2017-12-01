@@ -75,3 +75,6 @@ E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\obj\Release\FShop.WebApi.cspro
 E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\obj\Release\FShop.WebApi.csproj.CoreCompileInputs.cache
 E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\obj\Release\FShop.WebApi.dll
 E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\obj\Release\FShop.WebApi.pdb
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\System.Web.Cors.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\System.Web.Http.Cors.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\System.Web.Http.Cors.xml

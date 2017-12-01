@@ -75,3 +75,6 @@ E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\Microsoft.Owin.xml
 E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\Microsoft.Owin.Host.SystemWeb.xml
 E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\LibResponse.dll
 E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\LibResponse.pdb
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\System.Web.Cors.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\System.Web.Http.Cors.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\System.Web.Http.Cors.xml
