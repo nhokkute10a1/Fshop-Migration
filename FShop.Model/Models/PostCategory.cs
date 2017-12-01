@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using FShop.Entities.Abstract;
@@ -33,5 +34,6 @@ namespace FShop.Entities.Models
         public bool? HomeFlag { set; get; }
 
         public virtual IEnumerable<Post> Posts { set; get; }
+
     }
 }

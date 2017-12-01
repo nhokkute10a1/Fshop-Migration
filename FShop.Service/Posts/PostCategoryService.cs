@@ -7,11 +7,11 @@ namespace FShop.Service.Posts
 {
     public interface IPostCategoryService
     {
-        void Add(PostCategory postCategoryCategory);
+        PostCategory Add(PostCategory postCategory);
 
-        void Update(PostCategory postCategoryCategory);
+        void Update(PostCategory postCategory);
 
-        void Delete(int id);
+        PostCategory Delete(int id);
 
         IEnumerable<PostCategory> GetAll();
 
@@ -33,14 +33,14 @@ namespace FShop.Service.Posts
             this._unitOfWork = unitOfWork;
         }
 
-        public void Add(PostCategory postCategoryCategory)
+        public PostCategory Add(PostCategory postCategory)
         {
-            _postCategoryRepository.Add(postCategoryCategory);
+            return _postCategoryRepository.Add(postCategory);
         }
 
-        public void Delete(int id)
+        public PostCategory Delete(int id)
         {
-            _postCategoryRepository.Delete(id);
+            return _postCategoryRepository.Delete(id);
         }
 
         public IEnumerable<PostCategory> GetAll()

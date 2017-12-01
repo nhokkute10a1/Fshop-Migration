@@ -1,0 +1,6 @@
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Common\bin\Release\FShop.Common.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Common\bin\Release\FShop.Common.pdb
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Common\obj\Release\FShop.Common.csprojResolveAssemblyReference.cache
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Common\obj\Release\FShop.Common.csproj.CoreCompileInputs.cache
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Common\obj\Release\FShop.Common.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Common\obj\Release\FShop.Common.pdb

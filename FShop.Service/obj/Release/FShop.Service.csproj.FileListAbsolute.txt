@@ -1,0 +1,16 @@
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Service\bin\Release\FShop.Service.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Service\bin\Release\FShop.Service.pdb
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Service\bin\Release\FShop.Common.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Service\bin\Release\FShop.Data.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Service\bin\Release\FShop.Entities.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Service\bin\Release\EntityFramework.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Service\bin\Release\FShop.Common.pdb
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Service\bin\Release\FShop.Data.pdb
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Service\bin\Release\FShop.Data.dll.config
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Service\bin\Release\FShop.Entities.pdb
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Service\bin\Release\FShop.Entities.dll.config
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Service\bin\Release\EntityFramework.xml
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Service\obj\Release\FShop.Service.csprojResolveAssemblyReference.cache
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Service\obj\Release\FShop.Service.csproj.CoreCompileInputs.cache
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Service\obj\Release\FShop.Service.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.Service\obj\Release\FShop.Service.pdb

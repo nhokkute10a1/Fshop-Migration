@@ -1,0 +1,6 @@
+E:\SourceCode\ASP.NET\FShopMigration\LibResponse\bin\Release\LibResponse.dll
+E:\SourceCode\ASP.NET\FShopMigration\LibResponse\bin\Release\LibResponse.pdb
+E:\SourceCode\ASP.NET\FShopMigration\LibResponse\obj\Release\LibResponse.csprojResolveAssemblyReference.cache
+E:\SourceCode\ASP.NET\FShopMigration\LibResponse\obj\Release\LibResponse.csproj.CoreCompileInputs.cache
+E:\SourceCode\ASP.NET\FShopMigration\LibResponse\obj\Release\LibResponse.dll
+E:\SourceCode\ASP.NET\FShopMigration\LibResponse\obj\Release\LibResponse.pdb
