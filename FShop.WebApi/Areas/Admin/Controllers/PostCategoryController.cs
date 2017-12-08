@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using FShop.Data;
 using FShop.Entities.Models;
 using FShop.Service.Errors;
 using FShop.Service.Posts;
@@ -9,7 +10,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Net.Http;
 using System.Web.Mvc;
-
+using System.Linq;
 namespace FShop.WebApi.Areas.Admin.Controllers
 {
     [RoutePrefix("api/PostCategory")]
@@ -22,7 +23,38 @@ namespace FShop.WebApi.Areas.Admin.Controllers
         {
             this._postCategoryService = postCategoryService;
         }
-
+        public HttpResponseMessage GetAll(HttpRequestMessage request)
+        {
+            using (var db = new FShopDbContext())
+            {
+                var query = db.Menus.Select(x => new TestModel
+                {
+                    Id = x.ID,
+                    Name = x.Name,
+                    //GroupId = x.GroupID == 0 ? null : x.GroupID
+                    GroupName = x.MenuGroup.Name == string.Empty ? "Null" : x.MenuGroup.Name,
+                });
+                return CreateHttpResponse(request, () =>
+                {
+                    HttpResponseMessage response = null;
+                    response = request.CreateResponse(HttpStatusCode.OK, query);
+                    return response;
+                });
+            }
+        }
+        private bool CheckExits(string Name)
+        {
+            using(var db = new FShopDbContext())
+            {
+                var check = db.Menus.Where(x => x.Name == Name);
+                foreach(var item in check)
+                {
+                    if (item.Name == Name)
+                        return true;
+                }
+                return false;
+            }
+        }
         //public HttpResponseMessage GetAll(HttpRequestMessage request)
         //{
         //    return CreateHttpResponse(request, () =>
@@ -61,6 +93,18 @@ namespace FShop.WebApi.Areas.Admin.Controllers
         //        return response;
         //    });
         //}
-       
+
+    }
+    public class TestModel
+    {
+        public int Id { get; set; }
+        public int GroupId { get; set; }
+        public string Name { get; set; }
+        public string GroupName { get; set; }
+        public int? Max { get; set; }
+        public TestModel()
+        {
+            Max = 0;
+        }
     }
 }

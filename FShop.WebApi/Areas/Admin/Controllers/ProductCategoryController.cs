@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
@@ -76,31 +77,32 @@ namespace FShop.WebApi.Areas.Admin.Controllers
             });
         }
 
-        //[Route("GetAll")]
-        //[HttpGet]
-        //public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize = 20)
-        //{
-        //    return CreateHttpResponse(request, () =>
-        //    {
-        //        int totalRow = 0;
-        //        var model = _productCategoryService.GetAll(keyword);
+        [Route("GetAll")]
+        [HttpGet]
+        public HttpResponseMessage GetAll(HttpRequestMessage request, int page, int pageSize = 20)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                int totalRow = 0;
+                //var model = _productCategoryService.GetAll(keyword);
+               var model = _productCategoryService.GetAll();
 
-        //        totalRow = model.Count();
-        //        var query = model.OrderByDescending(x => x.CreatedDate).Skip(page * pageSize).Take(pageSize);
+                totalRow = model.Count();
+                var query = model.OrderByDescending(x => x.CreatedDate).Skip(page * pageSize).Take(pageSize);
 
-        //        var responseData = Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(query);
+                var responseData = Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(query);
 
-        //        var paginationSet = new PaginationSet<ProductCategoryViewModel>()
-        //        {
-        //            Items = responseData,
-        //            Page = page,
-        //            TotalCount = totalRow,
-        //            TotalPages = (int)Math.Ceiling((decimal)totalRow / pageSize)
-        //        };
-        //        var response = request.CreateResponse(HttpStatusCode.OK, paginationSet);
-        //        return response;
-        //    });
-        //}
+                var paginationSet = new PaginationSet<ProductCategoryViewModel>()
+                {
+                    Items = responseData,
+                    Page = page,
+                    TotalCount = totalRow,
+                    TotalPages = (int)Math.Ceiling((decimal)totalRow / pageSize)
+                };
+                var response = request.CreateResponse(HttpStatusCode.OK, paginationSet);
+                return response;
+            });
+        }
 
         /*===Add===*/
         [Route("Add")]

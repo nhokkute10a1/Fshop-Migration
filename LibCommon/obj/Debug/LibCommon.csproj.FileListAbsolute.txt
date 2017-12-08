@@ -1,0 +1,5 @@
+E:\SourceCode\ASP.NET\FShopMigration\LibCommon\bin\Debug\LibCommon.dll
+E:\SourceCode\ASP.NET\FShopMigration\LibCommon\bin\Debug\LibCommon.pdb
+E:\SourceCode\ASP.NET\FShopMigration\LibCommon\obj\Debug\LibCommon.csproj.CoreCompileInputs.cache
+E:\SourceCode\ASP.NET\FShopMigration\LibCommon\obj\Debug\LibCommon.dll
+E:\SourceCode\ASP.NET\FShopMigration\LibCommon\obj\Debug\LibCommon.pdb
