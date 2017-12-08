@@ -1,9 +1,9 @@
-﻿using AutoMapper;
-using FShop.Entities.Models;
+﻿using FShop.Entities.Models;
 using FShop.Service.Errors;
 using FShop.Service.Products;
 using FShop.Web.Models;
 using FShop.WebApi.Infrastructure.Core;
+<<<<<<< HEAD
 using FShop.WebApi.Infrastructure.Extensions;
 using LibResponse;
 using Newtonsoft.Json;
@@ -11,30 +11,32 @@ using System;
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
 using System.Linq;
+=======
+>>>>>>> parent of b48f53f... fix cors and conver json
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Web.Http.Cors;
+using FShop.WebApi.Infrastructure.Extensions;
+using AutoMapper;
+using System;
+using LibResponse;
+using System.Data.Entity.Validation;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace FShop.WebApi.Areas.Admin.Controllers
 {
-    /*---Fix(Access-Control-Allow-Origin)----*/
-
-    [EnableCors("*", "*", "*")]
     [RoutePrefix("api/ProductCategory")]
     public class ProductCategoryController : ApiControllerBase
     {
         #region Initialize
-
         private IProductCategoryService _productCategoryService;
-
         public ProductCategoryController(IErrorService errorService, IProductCategoryService productCategoryService) :
             base(errorService)
         {
             this._productCategoryService = productCategoryService;
         }
-
-        #endregion Initialize
+        #endregion
 
         [Route("GetAllParents")]
         [HttpGet]
@@ -50,12 +52,11 @@ namespace FShop.WebApi.Areas.Admin.Controllers
                     Status = true,
                     Data = responseData
                 };
-                
-                var response = request.CreateResponse(HttpStatusCode.OK,Res);
+
+                var response = request.CreateResponse(HttpStatusCode.OK, Res);
                 return response;
             });
         }
-
         [Route("GetById/{id:int}")]
         [HttpGet]
         public HttpResponseMessage GetById(HttpRequestMessage request, int id)
@@ -136,15 +137,15 @@ namespace FShop.WebApi.Areas.Admin.Controllers
                      newProductCategory.UpdateProductCategory(productCategoryVm);
                      newProductCategory.CreatedDate = DateTime.Now;
                      newProductCategory.UpdatedDate = DateTime.Now;
-                     if (productCategoryVm.Status)
+                     if(productCategoryVm.Status)
                      {
-                         newProductCategory.Status = true;
+                        newProductCategory.Status = true;
                      }
                      else
                      {
                          newProductCategory.Status = false;
                      }
-
+                     
                      _productCategoryService.Add(newProductCategory);
                      _productCategoryService.Save();
 
@@ -215,6 +216,7 @@ namespace FShop.WebApi.Areas.Admin.Controllers
                         throw;
                     }
 
+
                     var responseData = Mapper.Map<ProductCategory, ProductCategoryViewModel>(dbProductCategory);
                     var Res = new Res
                     {
@@ -239,14 +241,14 @@ namespace FShop.WebApi.Areas.Admin.Controllers
                 HttpResponseMessage response = null;
                 if (!ModelState.IsValid)
                 {
-                    var Error = "Không thể xóa được";
+                    //var Error = "Không thể xóa được";
 
-                    var Res = new Res
-                    {
-                        Status = false,
-                        Message = Error
-                    };
-                    response = request.CreateResponse(HttpStatusCode.BadRequest, Res);
+                    //var Res = new Res
+                    //{
+                    //    Status = false,
+                    //    Message = Error
+                    //};
+                    response = request.CreateResponse(HttpStatusCode.BadRequest, ModelState);
                 }
                 else
                 {
@@ -257,6 +259,7 @@ namespace FShop.WebApi.Areas.Admin.Controllers
                     _productCategoryService.Delete(idProductCategory);
 
                     _productCategoryService.Save();
+
 
                     var responseData = Mapper.Map<ProductCategory, ProductCategoryViewModel>(idProductCategory);
                     var Res = new Res
@@ -271,7 +274,6 @@ namespace FShop.WebApi.Areas.Admin.Controllers
                 return response;
             });
         }
-
         [Route("DeleteByDelete/{id}")]
         [HttpPost]
         public HttpResponseMessage DeleteByDelete(HttpRequestMessage request, int id)
@@ -308,5 +310,6 @@ namespace FShop.WebApi.Areas.Admin.Controllers
                 return response;
             });
         }
+
     }
 }
