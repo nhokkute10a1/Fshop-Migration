@@ -3,3 +3,4 @@ E:\SourceCode\ASP.NET\FShopMigration\LibResponse\bin\Debug\LibResponse.pdb
 E:\SourceCode\ASP.NET\FShopMigration\LibResponse\obj\Debug\LibResponse.csproj.CoreCompileInputs.cache
 E:\SourceCode\ASP.NET\FShopMigration\LibResponse\obj\Debug\LibResponse.dll
 E:\SourceCode\ASP.NET\FShopMigration\LibResponse\obj\Debug\LibResponse.pdb
+E:\SourceCode\ASP.NET\FShopMigration\LibResponse\obj\Debug\LibResponse.csprojResolveAssemblyReference.cache

@@ -12,6 +12,8 @@ namespace FShop.WebApi.Infrastructure.Extensions
         //step 6
         //map giua entity vs model view
         //sau khi map giua entity vs model view , phai mapping 2 cai lai vs nhau de post
+
+        /*===Post===*/
         public static void UpdatePostCategory(this PostCategory postCategory, PostCategoryViewModel postCategoryVm)
         {
             postCategory.ID = postCategoryVm.ID;
@@ -32,7 +34,29 @@ namespace FShop.WebApi.Infrastructure.Extensions
             postCategory.Status = postCategoryVm.Status;
 
         }
+        public static void UpdatePost(this Post post,PostViewModel postVm)
+        {
+            post.ID = postVm.ID;
+            post.Name = postVm.Name;
+            post.Alias = postVm.Alias;
+            post.CategoryID = postVm.CategoryID;
+            post.Image = postVm.Image;
+            post.Description = postVm.Description;
+            post.Content = postVm.Content;
+            post.HomeFlag = postVm.HomeFlag;
+            post.HotFlag = postVm.HotFlag;
+            post.ViewCount = postVm.ViewCount;
+            post.CreatedDate = postVm.CreatedDate;
+            post.CreatedBy = postVm.CreatedBy;
+            post.UpdatedDate = postVm.UpdatedDate;
+            post.UpdatedBy = postVm.UpdatedBy;
+            post.MetaKeyword = postVm.MetaKeyword;
+            post.MetaDescription = postVm.MetaDescription;
+            post.Status = postVm.Status;
 
+        }
+
+        /*===Product===*/
         public static void UpdateProductCategory(this ProductCategory productCategory, ProductCategoryViewModel productCategoryVm)
         {
             productCategory.ID = productCategoryVm.ID;
@@ -51,6 +75,44 @@ namespace FShop.WebApi.Infrastructure.Extensions
             productCategory.MetaKeyword = productCategoryVm.MetaKeyword;
             productCategory.MetaDescription = productCategoryVm.MetaDescription;
             productCategory.Status = productCategoryVm.Status;
+
+        }
+
+        public static void UpdateProduct(this Product product,ProductViewModel productVm)
+        {
+            product.ID = productVm.ID;
+            product.Name = productVm.Name;
+            product.Alias = productVm.Alias;
+            product.CategoryID = productVm.CategoryID;
+            product.Image = productVm.Image;
+            product.MoreImages = productVm.MoreImages;
+            product.Price = productVm.Price;
+            product.PromotionPrice = productVm.PromotionPrice;
+            product.Warranty = productVm.Warranty;
+            product.Description = productVm.Description;
+            product.Content = productVm.Content;
+            product.HomeFlag = productVm.HomeFlag;
+            product.HotFlag = productVm.HotFlag;
+            product.CreatedDate = productVm.CreatedDate;
+            product.CreatedBy = productVm.CreatedBy;
+            product.UpdatedDate = productVm.UpdatedDate;
+            product.UpdatedBy = productVm.UpdatedBy;
+            product.MetaKeyword = productVm.MetaKeyword;
+            product.MetaDescription = productVm.MetaDescription;
+            product.Status = productVm.Status;
+            product.Tags = productVm.Tags;
+            product.Quantity = productVm.Quantity;
+
+        }
+        /*===Feedback===*/
+        public static void UpdateFeedback(this Feedback feedback, FeedbackViewModel feedbackVm)
+        {
+            feedback.ID = feedbackVm.ID;
+            feedback.Name = feedbackVm.Name;
+            feedback.Email = feedbackVm.Email;
+            feedback.Message = feedbackVm.Message;
+            feedback.CreatedDate = feedbackVm.CreatedDate;
+            feedback.Status = feedbackVm.Status;
 
         }
     }

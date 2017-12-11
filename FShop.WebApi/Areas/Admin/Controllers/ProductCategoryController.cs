@@ -10,6 +10,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
+using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
@@ -18,7 +19,6 @@ using System.Web.Http.Cors;
 namespace FShop.WebApi.Areas.Admin.Controllers
 {
     /*---Fix(Access-Control-Allow-Origin)----*/
-
     [EnableCors("*", "*", "*")]
     [RoutePrefix("api/ProductCategory")]
     public class ProductCategoryController : ApiControllerBase
@@ -78,12 +78,12 @@ namespace FShop.WebApi.Areas.Admin.Controllers
 
         //[Route("GetAll")]
         //[HttpGet]
-        //public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize = 20)
+        //public HttpResponseMessage GetAllPaging(HttpRequestMessage request, int page, int pageSize)
         //{
         //    return CreateHttpResponse(request, () =>
         //    {
         //        int totalRow = 0;
-        //        var model = _productCategoryService.GetAll(keyword);
+        //        var model = _productCategoryService.GetAll();
 
         //        totalRow = model.Count();
         //        var query = model.OrderByDescending(x => x.CreatedDate).Skip(page * pageSize).Take(pageSize);
@@ -97,10 +97,41 @@ namespace FShop.WebApi.Areas.Admin.Controllers
         //            TotalCount = totalRow,
         //            TotalPages = (int)Math.Ceiling((decimal)totalRow / pageSize)
         //        };
-        //        var response = request.CreateResponse(HttpStatusCode.OK, paginationSet);
+
+        //        var Res = new Res()
+        //        {
+        //            Status = true,
+        //            Data = paginationSet
+        //        };
+        //        var response = request.CreateResponse(HttpStatusCode.OK, Res);
         //        return response;
         //    });
         //}
+        [Route("GetAll")]
+        [HttpGet]
+        public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize = 20)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                int totalRow = 0;
+                var model = _productCategoryService.GetAll(keyword);
+
+                totalRow = model.Count();
+                var query = model.OrderByDescending(x => x.CreatedDate).Skip((page-1) * pageSize).Take(pageSize);
+
+                var responseData = Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(query);
+
+                var paginationSet = new PaginationSet<ProductCategoryViewModel>()
+                {
+                    Items = responseData,
+                    Page = page,
+                    TotalCount = totalRow,
+                    TotalPages = (int)Math.Ceiling((decimal)totalRow / pageSize)
+                };
+                var response = request.CreateResponse(HttpStatusCode.OK, paginationSet);
+                return response;
+            });
+        }
 
         /*===Add===*/
         [Route("Add")]
@@ -269,7 +300,7 @@ namespace FShop.WebApi.Areas.Admin.Controllers
                 return response;
             });
         }
-
+        /*===Xóa theo pt put or delete===*/
         [Route("DeleteByDelete/{id}")]
         [HttpPost]
         public HttpResponseMessage DeleteByDelete(HttpRequestMessage request, int id)
