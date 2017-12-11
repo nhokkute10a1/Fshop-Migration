@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-﻿using System.Collections.Generic;
-using System.Linq;
-=======
+
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
->>>>>>> d92b92fa7af8a47b653f5126dd2af1eaa1f77d7d
 
 namespace FShop.WebApi.Infrastructure.Core
 {
@@ -24,11 +20,7 @@ namespace FShop.WebApi.Infrastructure.Core
 
         public int TotalPages { set; get; }
         public int TotalCount { set; get; }
-<<<<<<< HEAD
-      //  public int MaxPage { set; get; }
-=======
-        public int MaxPage { set; get; }
->>>>>>> d92b92fa7af8a47b653f5126dd2af1eaa1f77d7d
+       // public int MaxPage { set; get; }
         public IEnumerable<T> Items { set; get; }
     }
 }

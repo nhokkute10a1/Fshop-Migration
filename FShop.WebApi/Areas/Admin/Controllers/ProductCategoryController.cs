@@ -3,37 +3,21 @@ using FShop.Service.Errors;
 using FShop.Service.Products;
 using FShop.Web.Models;
 using FShop.WebApi.Infrastructure.Core;
-<<<<<<< HEAD
 using FShop.WebApi.Infrastructure.Extensions;
 using LibResponse;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity.Validation;
 using System.Linq;
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of b48f53f... fix cors and conver json
->>>>>>> d92b92fa7af8a47b653f5126dd2af1eaa1f77d7d
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using FShop.WebApi.Infrastructure.Extensions;
 using AutoMapper;
-using System;
-using LibResponse;
-using System.Data.Entity.Validation;
-using System.Collections.Generic;
-using System.Linq;
+using System.Web.Http.Cors;
 
 namespace FShop.WebApi.Areas.Admin.Controllers
 {
-<<<<<<< HEAD
-    /*---Fix(Access-Control-Allow-Origin)----*/
     [EnableCors("*", "*", "*")]
-=======
->>>>>>> d92b92fa7af8a47b653f5126dd2af1eaa1f77d7d
     [RoutePrefix("api/ProductCategory")]
     public class ProductCategoryController : ApiControllerBase
     {
@@ -86,16 +70,6 @@ namespace FShop.WebApi.Areas.Admin.Controllers
             });
         }
 
-<<<<<<< HEAD
-        //[Route("GetAll")]
-        //[HttpGet]
-        //public HttpResponseMessage GetAllPaging(HttpRequestMessage request, int page, int pageSize)
-        //{
-        //    return CreateHttpResponse(request, () =>
-        //    {
-        //        int totalRow = 0;
-        //        var model = _productCategoryService.GetAll();
-=======
         [Route("GetAll")]
         [HttpGet]
         public HttpResponseMessage GetAll(HttpRequestMessage request, int page, int pageSize = 20)
@@ -105,31 +79,28 @@ namespace FShop.WebApi.Areas.Admin.Controllers
                 int totalRow = 0;
                 //var model = _productCategoryService.GetAll(keyword);
                var model = _productCategoryService.GetAll();
->>>>>>> d92b92fa7af8a47b653f5126dd2af1eaa1f77d7d
-
-                totalRow = model.Count();
+               totalRow = model.Count();
                 var query = model.OrderByDescending(x => x.CreatedDate).Skip(page * pageSize).Take(pageSize);
 
                 var responseData = Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(query);
 
-<<<<<<< HEAD
-        //        var paginationSet = new PaginationSet<ProductCategoryViewModel>()
-        //        {
-        //            Items = responseData,
-        //            Page = page,
-        //            TotalCount = totalRow,
-        //            TotalPages = (int)Math.Ceiling((decimal)totalRow / pageSize)
-        //        };
+                var paginationSet = new PaginationSet<ProductCategoryViewModel>()
+                {
+                    Items = responseData,
+                    Page = page,
+                    TotalCount = totalRow,
+                    TotalPages = (int)Math.Ceiling((decimal)totalRow / pageSize)
+                };
 
-        //        var Res = new Res()
-        //        {
-        //            Status = true,
-        //            Data = paginationSet
-        //        };
-        //        var response = request.CreateResponse(HttpStatusCode.OK, Res);
-        //        return response;
-        //    });
-        //}
+                var Res = new Res()
+                {
+                    Status = true,
+                    Data = paginationSet
+                };
+                var response = request.CreateResponse(HttpStatusCode.OK, Res);
+                return response;
+            });
+        }
         [Route("GetAll")]
         [HttpGet]
         public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize = 20)
@@ -144,8 +115,6 @@ namespace FShop.WebApi.Areas.Admin.Controllers
 
                 var responseData = Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(query);
 
-=======
->>>>>>> d92b92fa7af8a47b653f5126dd2af1eaa1f77d7d
                 var paginationSet = new PaginationSet<ProductCategoryViewModel>()
                 {
                     Items = responseData,
@@ -327,10 +296,8 @@ namespace FShop.WebApi.Areas.Admin.Controllers
                 return response;
             });
         }
-<<<<<<< HEAD
+
         /*===Xóa theo pt put or delete===*/
-=======
->>>>>>> d92b92fa7af8a47b653f5126dd2af1eaa1f77d7d
         [Route("DeleteByDelete/{id}")]
         [HttpPost]
         public HttpResponseMessage DeleteByDelete(HttpRequestMessage request, int id)
