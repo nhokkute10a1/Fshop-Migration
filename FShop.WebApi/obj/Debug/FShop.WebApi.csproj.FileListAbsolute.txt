@@ -78,3 +78,35 @@ E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\obj\Debug\FShop.WebApi.csprojR
 E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\obj\Debug\FShop.WebApi.csproj.CoreCompileInputs.cache
 E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\obj\Debug\FShop.WebApi.dll
 E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\obj\Debug\FShop.WebApi.pdb
+<<<<<<< HEAD
+=======
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\EntityFramework.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\EntityFramework.SqlServer.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\FShop.Common.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\FShop.Data.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\FShop.Service.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\FShop.Common.pdb
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\FShop.Data.pdb
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\FShop.Data.dll.config
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\FShop.Service.pdb
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\EntityFramework.xml
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\EntityFramework.SqlServer.xml
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\FShop.Entities.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\FShop.Entities.pdb
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\FShop.Entities.dll.config
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\Autofac.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\Autofac.Integration.Mvc.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\Autofac.Integration.WebApi.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\AutoMapper.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\Microsoft.Owin.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\Owin.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\Autofac.xml
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\Autofac.Integration.Mvc.xml
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\Autofac.Integration.WebApi.xml
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\AutoMapper.xml
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\Microsoft.Owin.xml
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\LibResponse.dll
+E:\SourceCode\ASP.NET\FShopMigration\FShop.WebApi\bin\LibResponse.pdb
+>>>>>>> d92b92fa7af8a47b653f5126dd2af1eaa1f77d7d
