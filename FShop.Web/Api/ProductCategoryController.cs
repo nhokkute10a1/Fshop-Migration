@@ -70,41 +70,10 @@ namespace FShop.Web.Api
                 return response;
             });
         }
-
-        //[Route("GetAll")]
-        //[HttpGet]
-        //public HttpResponseMessage GetAll(HttpRequestMessage request, int page, int pageSize = 20)
-        //{
-        //    return CreateHttpResponse(request, () =>
-        //    {
-        //        int totalRow = 0;
-        //        //var model = _productCategoryService.GetAll(keyword);
-        //        var model = _productCategoryService.GetAll();
-        //        totalRow = model.Count();
-        //        var query = model.OrderByDescending(x => x.CreatedDate).Skip(page * pageSize).Take(pageSize);
-
-        //        var responseData = Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(query);
-
-        //        var paginationSet = new PaginationSet<ProductCategoryViewModel>()
-        //        {
-        //            Items = responseData,
-        //            Page = page,
-        //            TotalCount = totalRow,
-        //            TotalPages = (int)Math.Ceiling((decimal)totalRow / pageSize)
-        //        };
-
-        //        var Res = new Res()
-        //        {
-        //            Status = true,
-        //            Data = paginationSet
-        //        };
-        //        var response = request.CreateResponse(HttpStatusCode.OK, Res);
-        //        return response;
-        //    });
-        //}
-        [Route("GetAll")]
+        
+        [Route("GetAllPaging")]
         [HttpGet]
-        public HttpResponseMessage GetAll(HttpRequestMessage request, string keyword, int page, int pageSize = 20)
+        public HttpResponseMessage GetAllPaging(HttpRequestMessage request, string keyword, int page, int pageSize = 20)
         {
             return CreateHttpResponse(request, () =>
             {
@@ -123,7 +92,12 @@ namespace FShop.Web.Api
                     TotalCount = totalRow,
                     TotalPages = (int)Math.Ceiling((decimal)totalRow / pageSize)
                 };
-                var response = request.CreateResponse(HttpStatusCode.OK, paginationSet);
+                var Res = new Res()
+                {
+                    Status=true,
+                    Data= paginationSet
+                };
+                var response = request.CreateResponse(HttpStatusCode.OK, Res);
                 return response;
             });
         }

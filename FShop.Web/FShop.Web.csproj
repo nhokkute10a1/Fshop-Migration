@@ -849,13 +849,18 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="spa\app.js" />
+    <Content Include="spa\components\home\homeCtrl.js" />
+    <Content Include="spa\components\home\homeView.html" />
     <Content Include="spa\components\product_categories\productCategoryAddCtrl.js" />
     <Content Include="spa\components\product_categories\productCategoryAddView.html" />
     <Content Include="spa\components\product_categories\productCategoryEditCtrl.js" />
     <Content Include="spa\components\product_categories\productCategoryEditView.html" />
     <Content Include="spa\components\product_categories\productCategoryListCtrl.js" />
     <Content Include="spa\components\product_categories\productCategoryListView.html" />
+    <Content Include="spa\shared\modules\fShop.common.js" />
+    <Content Include="spa\shared\services\apiService.js" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="spa\components\product_categories\productCategory.module.js" />
     <None Include="Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -867,7 +872,6 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
@@ -880,7 +884,6 @@
     <Folder Include="spa\shared\directives\" />
     <Folder Include="spa\shared\footer\" />
     <Folder Include="spa\shared\navigation\" />
-    <Folder Include="spa\shared\services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
