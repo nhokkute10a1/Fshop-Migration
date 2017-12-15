@@ -857,6 +857,9 @@
     <Content Include="spa\components\product_categories\productCategoryEditView.html" />
     <Content Include="spa\components\product_categories\productCategoryListCtrl.js" />
     <Content Include="spa\components\product_categories\productCategoryListView.html" />
+    <Content Include="spa\shared\directives\pagerDirective.html" />
+    <Content Include="spa\shared\directives\pagerDirective.js" />
+    <Content Include="spa\shared\filters\statusFilter.js" />
     <Content Include="spa\shared\modules\fShop.common.js" />
     <Content Include="spa\shared\services\apiService.js" />
     <Content Include="Views\Admin\Index.cshtml" />
@@ -881,7 +884,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Assets\client\" />
-    <Folder Include="spa\shared\directives\" />
     <Folder Include="spa\shared\footer\" />
     <Folder Include="spa\shared\navigation\" />
   </ItemGroup>
