@@ -14,7 +14,7 @@ namespace FShop.WebApi.Infrastructure.Core
         {
             get
             {
-                return (Items != null) ? Items.Count() : 1;
+                return (Items != null) ? Items.Count() : 0;
             }
         }
 

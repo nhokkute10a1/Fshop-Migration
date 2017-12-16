@@ -81,7 +81,7 @@ namespace FShop.Web.Api
                 var model = _productCategoryService.GetAll();
 
                 totalRow = model.Count();
-                var query = model.OrderByDescending(x => x.CreatedDate).Skip((page-1)* pageSize).Take(pageSize);
+                var query = model.OrderByDescending(x => x.CreatedDate).Skip(page* pageSize).Take(pageSize);
 
                 var responseData = Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(query);
 

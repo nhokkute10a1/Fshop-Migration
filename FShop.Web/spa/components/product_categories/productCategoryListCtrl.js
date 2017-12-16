@@ -5,7 +5,7 @@
 
     function productCategoryListCtrl($scope, apiService) {
         $scope.productCategory = [];
-        $scope.page = 1;
+        $scope.page = 0;
         $scope.pagesCount = 0;
         $scope.keyword = '';
         //$scope.search = search;
@@ -13,13 +13,13 @@
         
         angular.element(function () {
             getListProductCategory();
-            $scope.ActiveClass(1);
+            $scope.ActiveClass(0);
         });
         //function search() {
         //    getListProductCategory();
         //}
         function getListProductCategory(page) {
-            page = page || 1;
+            page = page || 0;
             /*===Phân trang cách 2==*/
             let ArrPagination = [];
             var config = {
@@ -36,7 +36,7 @@
                     $scope.totalCount = result.data.Data.TotalCount;
 
                     /*===Phân trang cách 2==*/
-                    for (var i = 1; i <= result.data.Data.TotalPages; i++) {
+                    for (var i = 0; i <= result.data.Data.TotalPages -1 ; i++) {
                         ArrPagination.push(i);
                     }
                     $scope.Pagination = ArrPagination;
