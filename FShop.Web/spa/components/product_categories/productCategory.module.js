@@ -12,6 +12,10 @@
             url: "/product-category-add",
             templateUrl: "/spa/components/product_categories/productCategoryAddView.html",
             controller: "productCategoryAddCtrl"
+        }).state('productCategoryEdit', {
+            url: "/product-category-edit/:id",
+            templateUrl: "/spa/components/product_categories/productCategoryEditView.html",
+            controller: "productCategoryEditCtrl"
         });
     }
 })();

@@ -875,6 +875,7 @@
     <Content Include="spa\shared\filters\statusFilter.js" />
     <Content Include="spa\shared\modules\fShop.common.js" />
     <Content Include="spa\shared\services\apiService.js" />
+    <Content Include="spa\shared\services\commonService.js" />
     <Content Include="spa\shared\services\notificationService.js" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="spa\components\product_categories\productCategory.module.js" />
