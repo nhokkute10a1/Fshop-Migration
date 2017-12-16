@@ -40,7 +40,7 @@
                     };
 
                     $scope.pagePlus = function (count) {
-                        return + ($scope.page -1) + count;
+                        return +$scope.page + count;
                     }
 
                 }]

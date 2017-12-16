@@ -48,7 +48,7 @@
                         </tr>
                         <tfoot>
                             <tr>
-                                <td colspan="6"><span class="pull-right">Trang: {{page+1}} - Tổng số bản ghi: {{totalCount}}</span></td>
+                                <td colspan="6"><span class="pull-right">Trang: {{page}} - Tổng số bản ghi: {{totalCount}}</span></td>
                             </tr>
                         </tfoot>
                     </table>
@@ -56,22 +56,22 @@
             </div>
         </div>
         <!-- /.box-body -->
-        <!--<section style="text-align:center">
+        <section style="text-align:center">
             <ul class="pagination pagination-sm">
                 <li ng-repeat="p in Pagination" ng-click="ActiveClass(p)" ng-class="{active: IsActiveClass(p)}">
                     <a href="javascript:void(0)" ng-click="PaggingProduct(p)">{{p}}</a>
                 </li>
             </ul>
-        </section>-->
+        </section>
+        <section style="text-align:center">
+            <pagging-boostrap total-page="Pagination" go-to-page="GoToPage(page)"></pagging-boostrap>
+        </section>
         <div class="box-footer clearfix">
-            <pager-directive page="{{page}}" custom-path="{{customPath}}" pages-count="{{pagesCount}}" 
+            <pager-directive page="{{page}}" custom-path="{{customPath}}" pages-count="{{pagesCount}}"
                              total-count="{{totalCount}}" search-func="getListProductCategory(page)"></pager-directive>
-        </div><!-- /.box-footer-->
-    </div><!-- /.box -->
-</section><!-- /.content -->
         </div>
-<!-- /.box-footer-->
+        <!-- /.box-footer-->
     </div>
-<!-- /.box -->
+    <!-- /.box -->
 </section>
 <!-- /.content -->

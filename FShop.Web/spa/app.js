@@ -10,6 +10,7 @@
     function config($stateProvider, $urlRouterProvider) {
         $stateProvider.state('home', {
             url: "/admin",
+            cache: false,
             templateUrl: "/spa/components/home/homeView.html",
             controller: "homeCtrl"
         });

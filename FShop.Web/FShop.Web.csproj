@@ -859,6 +859,8 @@
     <Content Include="spa\components\product_categories\productCategoryListView.html" />
     <Content Include="spa\shared\directives\pagerDirective.html" />
     <Content Include="spa\shared\directives\pagerDirective.js" />
+    <Content Include="spa\shared\directives\pagination.html" />
+    <Content Include="spa\shared\directives\paginationDirective.js" />
     <Content Include="spa\shared\filters\statusFilter.js" />
     <Content Include="spa\shared\modules\fShop.common.js" />
     <Content Include="spa\shared\services\apiService.js" />
