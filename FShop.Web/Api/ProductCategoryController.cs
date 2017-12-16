@@ -20,6 +20,7 @@ namespace FShop.Web.Api
 {
     [RoutePrefix("api/ProductCategory")]
     [EnableCors("*", "*", "*")]
+    [AllowAnonymous]
     public class ProductCategoryController : ApiControllerBase
     {
         #region Initialize
@@ -70,18 +71,18 @@ namespace FShop.Web.Api
                 return response;
             });
         }
-        
+
         [Route("GetAllPaging")]
         [HttpGet]
-        public HttpResponseMessage GetAllPaging(HttpRequestMessage request, int page, int pageSize = 20)
+        public HttpResponseMessage GetAllPaging(HttpRequestMessage request, string keyword, int page, int pageSize = 20)
         {
             return CreateHttpResponse(request, () =>
             {
                 int totalRow = 0;
-                var model = _productCategoryService.GetAll();
+                var model = _productCategoryService.GetAll(keyword);
 
                 totalRow = model.Count();
-                var query = model.OrderByDescending(x => x.CreatedDate).Skip(page* pageSize).Take(pageSize);
+                var query = model.OrderByDescending(x => x.CreatedDate).Skip(page * pageSize).Take(pageSize);
 
                 var responseData = Mapper.Map<IEnumerable<ProductCategory>, IEnumerable<ProductCategoryViewModel>>(query);
 
@@ -94,8 +95,8 @@ namespace FShop.Web.Api
                 };
                 var Res = new Res()
                 {
-                    Status=true,
-                    Data= paginationSet
+                    Status = true,
+                    Data = paginationSet
                 };
                 var response = request.CreateResponse(HttpStatusCode.OK, Res);
                 return response;

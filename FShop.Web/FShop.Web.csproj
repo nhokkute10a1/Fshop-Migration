@@ -623,6 +623,10 @@
     <Content Include="Assets\admin\libs\slimScroll\examples\style.css" />
     <Content Include="Assets\admin\libs\slimScroll\jquery.slimscroll.js" />
     <Content Include="Assets\admin\libs\slimScroll\jquery.slimscroll.min.js" />
+    <Content Include="Assets\admin\libs\toastr\toastr.css" />
+    <Content Include="Assets\admin\libs\toastr\toastr.js" />
+    <Content Include="Assets\admin\libs\toastr\toastr.min.css" />
+    <Content Include="Assets\admin\libs\toastr\toastr.min.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -837,6 +841,13 @@
     <Content Include="Assets\admin\libs\jQuery\test\data\support\csp.log" />
     <Content Include="Assets\admin\libs\jQuery\test\node_smoke_tests\.eslintrc.json" />
     <Content Include="Assets\admin\libs\jQuery\test\promises_aplus_adapters\.eslintrc.json" />
+    <Content Include="Assets\admin\libs\toastr\.bower.json" />
+    <Content Include="Assets\admin\libs\toastr\bower.json" />
+    <Content Include="Assets\admin\libs\toastr\LICENSE" />
+    <Content Include="Assets\admin\libs\toastr\README.md" />
+    <Content Include="Assets\admin\libs\toastr\toastr.js.map" />
+    <Content Include="Assets\admin\libs\toastr\toastr.less" />
+    <Content Include="Assets\admin\libs\toastr\toastr.scss" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -864,6 +875,7 @@
     <Content Include="spa\shared\filters\statusFilter.js" />
     <Content Include="spa\shared\modules\fShop.common.js" />
     <Content Include="spa\shared\services\apiService.js" />
+    <Content Include="spa\shared\services\notificationService.js" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="spa\components\product_categories\productCategory.module.js" />
     <None Include="Views\Shared\_LayoutAdmin.cshtml" />
