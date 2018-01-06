@@ -15,6 +15,7 @@ using System.Web.Http;
 using System.Web.Http.Cors;
 using LibResponse;
 using System.Data.Entity.Validation;
+using System.Web.Script.Serialization;
 
 namespace FShop.Web.Api
 {
@@ -272,6 +273,36 @@ namespace FShop.Web.Api
                 return response;
             });
         }
+
+        /*===Delete Multi===*/
+        [Route("DeleteMulti")]
+        [HttpDelete]
+        public HttpResponseMessage DeleteMulti(HttpRequestMessage request, string checkedProductCategories)
+        {
+            return CreateHttpResponse(request, () =>
+            {
+                HttpResponseMessage response = null;
+                if (!ModelState.IsValid)
+                {
+                    response = request.CreateResponse(HttpStatusCode.BadRequest, ModelState);
+                }
+                else
+                {
+                    var listProductCategory = new JavaScriptSerializer().Deserialize<List<int>>(checkedProductCategories);
+                    foreach (var item in listProductCategory)
+                    {
+                        _productCategoryService.DeleteHttpDelete(item);
+                    }
+
+                    _productCategoryService.Save();
+
+                    response = request.CreateResponse(HttpStatusCode.OK, listProductCategory.Count);
+                }
+
+                return response;
+            });
+        }
+
 
         /*===Xóa theo pt put or delete===*/
         [Route("DeleteByDelete/{id}")]

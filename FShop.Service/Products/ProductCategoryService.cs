@@ -14,8 +14,9 @@ namespace FShop.Service.Products
         ProductCategory Add(ProductCategory productCategory);
 
         void Update(ProductCategory productCategory);
+        /*==Delete by httpdelete==*/
+        ProductCategory DeleteHttpDelete(int id);
 
-        //ProductCategory Delete(int id);
         void Delete(ProductCategory productCategory);
         void DeleteByDelete(int id);
 
@@ -43,6 +44,11 @@ namespace FShop.Service.Products
         {
             return _productCategoryRepository.Add(productCategory);
         }
+        /*==Delete by httpdelete==*/
+        public ProductCategory DeleteHttpDelete(int id)
+        {
+            return _productCategoryRepository.Delete(id);
+        }
 
         public void Delete(ProductCategory productCategory)
         {
@@ -53,6 +59,8 @@ namespace FShop.Service.Products
         {
             _productCategoryRepository.Delete(id);
         }
+
+        
 
         public IEnumerable<ProductCategory> GetAll()
         {

@@ -1,7 +1,7 @@
 ﻿(function (app) {
     app.controller('productCategoryAddCtrl', productCategoryAddCtrl);
 
-    productCategoryAddCtrl.$inject = ['$scope', 'apiService', 'notificationService', '$state','commonService'];
+    productCategoryAddCtrl.$inject = ['$scope', 'apiService', 'notificationService', '$state', 'commonService'];
     function productCategoryAddCtrl($scope, apiService, notificationService, $state, commonService) {
         $scope.productCate = {
             CreateDate: new Date(),
@@ -17,9 +17,11 @@
             $scope.productCate.Alias = commonService.getSeoTitle($scope.productCate.Name);
         }
         function AddProductCategory() {
-            apiService.post('/api/ProductCategory/Add', $scope.productCate, function () {
-                notificationService.displaySuccess('Thêm mới thành công');
-                $state.go('productCategory');
+            apiService.post('/api/ProductCategory/Add', $scope.productCate, function (result) {
+                if (result.data.Status) {
+                    notificationService.displaySuccess('Thêm mới thành công');
+                    $state.go('productCategory');
+                }
             }, function (error) {
                 notificationService.displayError('Thêm mới thất bại');
             });

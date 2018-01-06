@@ -45,4 +45,9 @@ namespace FShop.Web.Models
         //[Required(ErrorMessage = "Yêu cầu nhập trạng thái")]
         public bool Status { set; get; }
     }
+
+    public class DeleteProductCategoryViewModel {
+        public int ID { set; get; }
+    }
+
 }

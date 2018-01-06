@@ -57,6 +57,12 @@ namespace FShop.WebApi.Infrastructure.Extensions
         }
 
         /*===Product===*/
+        public static void UpdateDeleteProductCategory(this DeleteProductCategory productCategory, DeleteProductCategoryViewModel productCategoryVm)
+        {
+            productCategory.ID = productCategoryVm.ID;
+
+        }
+
         public static void UpdateProductCategory(this ProductCategory productCategory, ProductCategoryViewModel productCategoryVm)
         {
             productCategory.ID = productCategoryVm.ID;

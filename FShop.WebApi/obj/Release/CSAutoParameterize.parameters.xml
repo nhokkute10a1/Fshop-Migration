@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="FShop-Web.config Connection String" description="FShop Connection String used in web.config by the application to access the database." defaultValue="Data Source=NINETAILEDFOX-P;Initial Catalog=FShop;Integrated Security=False;User Id=sa;Password=Death494;MultipleActiveResultSets=True" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="E:\\SourceCode\\ASP\.NET\\FShopMigration\\FShop\.WebApi\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='FShop']/@connectionString" />
-  </parameter>
-</parameters>

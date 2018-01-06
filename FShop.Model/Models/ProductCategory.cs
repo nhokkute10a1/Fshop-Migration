@@ -32,4 +32,9 @@ namespace FShop.Entities.Models
 
         public virtual IEnumerable<Product> Products { set; get; }
     }
+
+    public class DeleteProductCategory
+    {
+        public int ID { set; get; }
+    }
 }
